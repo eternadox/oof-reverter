@@ -21,7 +21,7 @@ for v in roblox_versions:
 
 ### Downloading and replacing oof sound ###
 
-r = requests.Session().get("https://www.gamespecifications.com/wp-content/uploads/2020/10/roblox-oof-gamespecifications.com_.ogg") # only link i could find :shrug:
+r = requests.Session().get("https://github.com/eternadox/oof-reverter/blob/main/oof.ogg?raw=true") #
 
 print("[OofReverter] Downloaded oof sound effect ")
 
