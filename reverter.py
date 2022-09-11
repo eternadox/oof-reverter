@@ -3,7 +3,7 @@ import re
 import requests
 from glob import glob
 
-ROBLOXDIR = os.getenv("LOCALAPPDATA")+"\Roblox\Versions\*"
+ROBLOXDIR = os.getenv("$HOME/.local/share/grapejuice/prefixes/player/drive_c/Program Files (x86)/Roblox/Versions/*"
 
 roblox_versions = glob(ROBLOXDIR, recursive = True)
 
