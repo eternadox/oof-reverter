@@ -7,13 +7,12 @@ jobs:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v1
-
       - name: Create Executable
         id: create_executable
         run: pip install pyinstaller && pyinstaller --onefile windows.py
       - name: Debugging
         id: debugging
-        run: ls
+        run: ls dist | readlink -f 
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
