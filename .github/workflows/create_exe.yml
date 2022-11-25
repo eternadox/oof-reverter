@@ -1,0 +1,9 @@
+name: Create Executable
+on: [push]
+jobs:
+  create-exe:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v1
+      - run: pip install pyinstaller
+      - run: pyinstaller --onefile windows.py
