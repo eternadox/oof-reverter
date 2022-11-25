@@ -4,5 +4,6 @@ jobs:
   create-exe:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - run: pip install pyinstaller
-      - run: ls /home/runner/work/oof-reverter/oof-reverter
+      - run: pyinstaller --onefile windows.py
