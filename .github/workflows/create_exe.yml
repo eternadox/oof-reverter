@@ -10,9 +10,6 @@ jobs:
       - name: Create Executable
         id: create_executable
         run: pip install pyinstaller && pyinstaller --onefile windows.py
-      - name: Debugging
-        id: debugging
-        run: readlink -f dist/windows.exe
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
@@ -33,8 +30,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./home/runner/oof-reverter/oof-reverter/dist/windows.exe
-          asset_name: windows.exe
+          asset_path: /home/runner/work/oof-reverter/oof-reverter/dist/windows.exe
+          asset_name: oof-reverter-windows.exe
           asset_content_type: application/octet-stream
       - name: Publish release
         uses: StuYarrow/publish-release@v1.1.2
