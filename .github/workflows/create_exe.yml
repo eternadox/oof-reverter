@@ -12,7 +12,7 @@ jobs:
         run: pip install pyinstaller && pyinstaller --onefile windows.py
       - name: Debugging
         id: debugging
-        run: ls dist | readlink -f 
+        run: readlink -f dist/windows.exe
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
