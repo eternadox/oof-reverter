@@ -4,9 +4,14 @@ jobs:
   create-exe:
       runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v1
-      - run: pip install pyinstaller
-      - run: pyinstaller --onefile windows.py
+
+      - name: Create Executable
+        id: create_executable
+        uses: actions/checkout@v1
+        run: pip install pyinstaller && pyinstaller --onefile windows.py
+      - name: Debugging
+        id: debugging
+        run: ls
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
