@@ -27,9 +27,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./path/to/asset.zip
-          asset_name: asset.zip
-          asset_content_type: application/zip
+          asset_path: ./dist/windows.exe
+          asset_name: oof-reverter-windows.exe
+          asset_content_type: application/octet-stream
       - name: Publish release
         uses: StuYarrow/publish-release@v1.1.2
         env:
